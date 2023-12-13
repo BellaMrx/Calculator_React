@@ -1,3 +1,4 @@
+/* button component makes the button functional */
 import { useContext } from "react";
 import { CalcContext } from '../context/CalcContext'
 
