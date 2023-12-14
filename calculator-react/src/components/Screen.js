@@ -1,14 +1,14 @@
 /* the screen component (is the upper, child element in the wrapper) 
   is for displaying the input/result  */
 import { useContext } from "react"
-import { CalcContext } from "../context/CalcContext"
+import { CalculatorContext } from "../context/CalcAppContext"
 import { Textfit } from 'react-textfit';
 /* https://www.npmjs.com/package/react-textfit
     npm install react-textfit --save  
     (if an error message is displayed during installation then try: 
     npm install react-textfit --force) */ 
 const Screen = () => {
-  const { calc } = useContext(CalcContext);
+  const { calc } = useContext(CalculatorContext);
 
   return (
     /* react-textfit automatically adjusts the size of the text output 
@@ -19,4 +19,5 @@ const Screen = () => {
 }
 
 export default Screen
+/* import into App.js */
  

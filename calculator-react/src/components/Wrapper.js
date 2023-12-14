@@ -9,3 +9,4 @@ const Wrapper = ({ children }) => {
   }
   
   export default Wrapper
+  /* import into App.js */

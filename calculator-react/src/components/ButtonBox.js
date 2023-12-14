@@ -8,4 +8,5 @@ const ButtonBox = ({ children }) => {
   }
   
   export default ButtonBox
+  /* import into App.js */
 

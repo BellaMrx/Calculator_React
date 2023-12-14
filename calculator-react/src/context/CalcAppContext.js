@@ -2,12 +2,12 @@ import { createContext, useState } from "react"
 
 /* https://react.dev/reference/react/createContext#provider
   https://legacy.reactjs.org/docs/context.html */
-export const CalcContext = createContext()
+export const CalculatorContext = createContext()
 const CalcProvider = ({ children }) => {
   const [calc, setCalc] = useState({
     sign: "",
     num: 0,
-    res: 0
+    res: "Hello World",    // 0
   });
 
   const providerValue = {
@@ -15,10 +15,11 @@ const CalcProvider = ({ children }) => {
   }
 
   return (
-    <CalcContext.Provider value={providerValue}>
+    <CalculatorContext.Provider value={providerValue}>
       {children}
-    </CalcContext.Provider>
+    </CalculatorContext.Provider>
   )
 }
 
 export default CalcProvider
+/* import into App.js */

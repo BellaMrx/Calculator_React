@@ -1,3 +1,4 @@
+/* import into index.js */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
@@ -58,6 +59,6 @@ body {
   grid-column: 3/5;
 }
 
-.opt {
+.operators {
   background: #f79505;
 }
