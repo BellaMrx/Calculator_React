@@ -5,6 +5,9 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  /* The <React.StrictMode> mode is useful for displaying errors, 
+  warnings about side effects or deprecated React constructs on 
+  the console or in the web browser.  */
   <React.StrictMode>
     <App />
   </React.StrictMode>

@@ -2,6 +2,8 @@
 import { useContext } from "react";
 import { CalcContext } from '../context/CalcContext'
 
+/* function creates the class names for the operators (+-x/=) 
+  to be used in them in index.css .equals .opt  */
 const getStyleName = btn => {
   const className = {
     '=': 'equals',
@@ -13,6 +15,7 @@ const getStyleName = btn => {
   return className[btn]
 }
 
+/* button functions */
 const Button = ({ value }) => {
   const { calc, setCalc } = useContext(CalcContext);
 
@@ -87,6 +90,8 @@ const Button = ({ value }) => {
     })
   }
 
+/* all button function in handleBtnClick event - 
+  results function is called up when the respective button is pressed */
   const handleBtnClick = () => {
     
     const results = {
@@ -103,13 +108,18 @@ const Button = ({ value }) => {
     if(results[value]) {
       return results[value]()
     } else {
+      // calls the number the user has pressed
       return handleClickButton()
     }
   }
 
   return (
-    <button onClick={handleBtnClick} className={`${getStyleName(value)} button`}>{value}</button>
+    <button onClick={handleBtnClick} className={`${getStyleName(value)} button`}>{value}</button> 
+    // onClick={handleBtnClick} calls the handleBtnClick event 
+    // ${getStyleName(value)} button` calls the function getStyleName with the respective value 
+    /* the styling of the Button component is done in index.css .button (className) */ 
   )
 }
 
 export default Button
+

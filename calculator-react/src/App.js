@@ -18,6 +18,8 @@ function App() {
       <Wrapper>
         <Screen />
         <ButtonBox>
+          {/* an array (const btnValues) of new elements is created for each
+           element and the resulting arrays are linked to form a new array */} 
           {btnValues.flat().map((btn, i) => (
             <Button
               value={btn}

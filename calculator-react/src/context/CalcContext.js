@@ -1,5 +1,7 @@
 import { createContext, useState } from "react"
 
+/* https://react.dev/reference/react/createContext#provider
+  https://legacy.reactjs.org/docs/context.html */
 export const CalcContext = createContext()
 const CalcProvider = ({ children }) => {
   const [calc, setCalc] = useState({
