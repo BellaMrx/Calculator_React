@@ -11,6 +11,10 @@ const getClassName = btn => {
     '-': 'operators',
     '+': 'operators',
     '/': 'operators',
+    '.': 'sec-operators',
+    'C': 'sec-operators',
+    '%': 'sec-operators',
+    '+-': 'sec-operators',
   }
   return className[btn]
 }
